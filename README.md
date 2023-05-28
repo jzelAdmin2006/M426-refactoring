@@ -160,9 +160,9 @@ am Code? Und wie lässt sich das Problem beheben?
 
 #### Zusatzaufgabe (freiwillig)
 
-Schreiben Sie die Klasse `FamilyMember` (und wenn nötig: die Klasse
-`Main()`-Methode in der Klasse `Heritage`) um, sodass die Beziehungen nicht mehr
-von den Eltern zu den Kindern, sondern von den Kindern zu den Eltern gehen.
+Schreiben Sie die Klasse `FamilyMember` (und wenn nötig: die `Main()`-Methode in
+der Klasse `Heritage`) um, sodass die Beziehungen nicht mehr von den Eltern zu
+den Kindern, sondern von den Kindern zu den Eltern gehen.
 
 ### Fibonacci-Zahlen
 
@@ -185,6 +185,10 @@ Die Klasse `CurrencyConverter` (`Refactoring/CurrencyConverter.cs`) enthält ein
 Methode zur Umrechnung von Schweizer Franken (CHF) in einige andere Währungen
 (USD, EUR, GBP, RUB).
 
+Will man eine weitere Währung unterstützen, muss der Code erweitert werden.
+Schöner wäre es, wenn man hierzu nur eine Datenstruktur reweitern müsste. Bauen
+Sie die Methode `ConvertTo` entsprechend um.
+
 Schreiben Sie Ihre Tests in `Refactoring.Tests/CurrencyConverterTest.cs`.
 
 ### Benotung
@@ -192,6 +196,10 @@ Schreiben Sie Ihre Tests in `Refactoring.Tests/CurrencyConverterTest.cs`.
 Die Klasse `Grading` (`Refactoring/Grading.cs`) besteht nur aus einer statischen
 Methode namens `GetLetterGrade`. Diese übersetzt numerische Noten von 1 (beste)
 bis 6 (schlechteste) in Buchstaben von A (beste) bis F (schlechteste).
+
+Der Code kann wesentlich einfacher gestaltet werden, wenn man sich den Umstand
+zunutze macht, dass sich die ASCII-Zeichen `A` bis `F` alle mit dem gleichen
+Mechanismus in die Zahlen `1` bis `6` umrechnen lassen.
 
 Schreiben Sie Ihre Tests in `Refactoring.Tests/GradingTest.cs`.
 
@@ -204,6 +212,12 @@ einem Unix-artigen System finden Sie diese mittels `man 7 ascii`)
 
 Die Klasse `Rounding` (`Refactoring/Rounding.cs`) ermöglicht mittels der Methode
 `Round()` das Runden auf eine bestimmte Präzision.
+
+Zwischen der Genauigkeit der Rundung (`Precision`) und den Werten, die in der
+Berechnungsformel verwendet werden, besteht ein Zusammenhang. (Tipp: Will man
+eine Zahl auf Hundertstel genau runden, kann man das Hundertfache der Zahl
+runden und diese anschliessend durch hundert dividieren.) Vereinfachen Sie den
+Code entsprechend.
 
 Schreiben Sie Ihre Tests in `Refactoring.Tests/RoundingTest.cs`.
 
@@ -218,10 +232,12 @@ In diesem Beispiel gibt es mehrere Klassen:
 - `Zoo` (`Refactoring/Animals/Zoo.cs`): eine Client-Klasse, welche die bisher
   genannten Klassen verwendet
 
-Schreiben Sie Ihre Tests für die Methode `Zoo.MakeNoise()` in `Refactoring.Tests/ZooTest.cs`.
-
-Falls Sie das Problem am Code (Methode `MakeNoise()`) nicht sehen, überlegen Sie
+Die Methode in `Zoo.MakeNoise()` ist nicht sinnvoll implementiert worden.
+Verbessern Sie diese. Falls Sie das Problem am Code nicht sehen, überlegen Sie
 sich am besten, was der Zweck von Polymorphie und Vererbung ist.
+
+Schreiben Sie Ihre Tests für die Methode `Zoo.MakeNoise()` in
+`Refactoring.Tests/ZooTest.cs`.
 
 ## Python (Unterverzeichnis `python`)
 
