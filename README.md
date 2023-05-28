@@ -126,7 +126,7 @@ Die Aufgabe besteht aus den folgenden Dateien:
 - `Refactoring/Heritage.cs` (`Main()`-Methode)
 - `Refactoring.Tests/FamilyMemberTest.cs` (Testfall)
 
-Die Klasse `Heritage.cs` definiert die Beziehungen zwischen den
+Die Klasse `Heritage` definiert die Beziehungen zwischen den
 Familienmitgliedern, indem jedem Familienmitglied eine Reihe von Kindern
 (`children`) zugewiesen wird. (Die Beziehungen werden also von oben nach unten
 modelliert.)
@@ -261,6 +261,43 @@ Installieren Sie `pytest`:
    pip install pytest
 
 ### Stammbaum
+
+Bei dieser Aufgabe wird der folgende (unvollständige, da nur einen Elternteil
+zeigende) Stammbaum abgebildet:
+
+![Ein Stammbaum (unvollständig) als _Binärbaum_](family-tree.png)
+
+Die Aufgabe besteht aus den folgenden Dateien:
+
+- `refactoring/family_member.py` (Klasse `FamilyMember`)
+- `heritage.py` (ausführbares Programm)
+- `tests/family_member_test.py` (Testfall)
+
+Der Code in `heritage.py` definiert die Beziehungen zwischen den
+Familienmitgliedern, indem jedem Familienmitglied eine Reihe von Kindern
+(`children`) zugewiesen wird. (Die Beziehungen werden also von oben nach unten
+modelliert.)
+
+Das Programm lässt sich folgendermassen im Terminal ausführen:
+
+   python refactoring/heritage.py
+
+Dadurch werden die Nachfahren von _Otto_ textuell ausgegeben:
+
+	 Monica is a descendant of Otto (generation 1)
+		 Irene is a descendant of Otto (generation 2)
+			 Aline is a descendant of Otto (generation 3)
+			 Basil is a descendant of Otto (generation 3)
+		 James is a descendant of Otto (generation 2)
+			 Charlotte is a descendant of Otto (generation 3)
+			 Daniel is a descendant of Otto (generation 3)
+	 Ned is a descendant of Otto (generation 1)
+		 Katie is a descendant of Otto (generation 2)
+			 Eleanor is a descendant of Otto (generation 3)
+			 Fred is a descendant of Otto (generation 3)
+		 Lance is a descendant of Otto (generation 2)
+			 Geany is a descendant of Otto (generation 3)
+			 Hank is a descendant of Otto (generation 3)
 
 #### Zusatzaufgabe (freiwillig)
 
