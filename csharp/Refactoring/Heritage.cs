@@ -17,7 +17,7 @@ public class Heritage
         // parent generation
         FamilyMember irene = new FamilyMember("Irene", new() { aline, basil });
         FamilyMember james = new FamilyMember("James", new() { charlotte, daniel });
-        FamilyMember katie = new FamilyMember("Klara", new() { eleanor, fred });
+        FamilyMember katie = new FamilyMember("Katie", new() { eleanor, fred });
         FamilyMember lance = new FamilyMember("Lance", new() { geany, hank });
 
         // grandparent generation
