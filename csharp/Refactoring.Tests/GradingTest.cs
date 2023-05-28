@@ -1,6 +1,6 @@
 namespace Refactoring.Tests;
 
-public class GradingTest 
+public class GradingTest
 {
     // TODO
 }
