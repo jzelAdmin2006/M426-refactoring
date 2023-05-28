@@ -109,6 +109,10 @@ Die Angaben zu Quellcodedateien beziehen sich auf die Unterverzeichnisse
 
 ## C# (Unterverzeichnis `csharp`)
 
+Stellen Sie sicher, dass Sie das .Net-SDK in Version 7 installiert haben! Falls Sie mit dem Terminal arbeiten, wechseln Sie jetzt in das Unterverzeichnis `csharp/`:
+
+   cd csharp/
+
 ### Stammbaum
 
 Bei dieser Aufgabe wird der folgende (unvollständige, da nur einen Elternteil
@@ -241,7 +245,20 @@ Schreiben Sie Ihre Tests für die Methode `Zoo.MakeNoise()` in
 
 ## Python (Unterverzeichnis `python`)
 
-TODO
+Stellen Sie sicher, dass Sie Python in einer aktuellen Version (3.11) mitsamt `pip` installiert haben. Wechseln Sie im Terminal ins Unterverzeichnis `python/`, wo Sie eine virtuelle Umgebung anlegen:
+
+   cd python/
+   python -m venv env
+
+Aktivieren Sie die virtuelle Umgebung:
+
+   . env/bin/activate       # Linux/Bash
+   env/Scripts/activate     # Windows/Bash
+   env/Scripts/Activate.ps1 # Windows/PowerShell
+
+Installieren Sie `pytest`:
+
+   pip install pytest
 
 ### Stammbaum
 
