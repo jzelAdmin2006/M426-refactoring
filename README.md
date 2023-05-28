@@ -1,8 +1,6 @@
-# Refactoring
+# Refactoring: Theorie
 
-## Idee
-
-### Definition
+## Definition
 
 > **Refactoring** (noun): a change made to the internal structure of software to
 > make it easier to understand and cheaper to modify without changing its
@@ -24,7 +22,7 @@ p. 45 (Martin Fowler, Kent Beck)
 
 (Eigene Übersetzung)
 
-### Gründe für das Refactoring
+## Gründe für das Refactoring
 
 1. **Refactoring verbessert das Design von Software.** Die Struktur von
    Software, die laufend erweitert wird, verschlechtert sich mit der Zeit.
@@ -57,7 +55,8 @@ Wie soll man beim Refactoring vorgehen?
    Hinweis darauf, dass etwas mit dem Code nicht stimmt.
 2. **Tests schreiben.** Bevor man sich an die Verbesserung des Codes macht,
    schreibt man Unit Tests, die das Verhalten des zu überarbeitenden Codes
-   prüfen.
+   prüfen. Bestehen bereits Testfälle, macht man sich mit ihnen vertraut und
+   führt sie aus.
 3. **Refactoring anwenden.** Zu den verschiedenen _Code Smells_ gibt es
    verschiedene Lösungsansätze, sog. _Refactorings_. Diese können auf den Code
    angewendet werden.
@@ -66,14 +65,14 @@ Nach dem Refactoring hat man einerseits verbesserten Produktivcode, andererseits
 eine aktuelle Testreihe, welche das korrekte Verhalten des verbesserten Codes
 sicherstellt.
 
-### Code Smells und Refactorings
+## Code Smells und Refactorings
 
 **Achtung:** Es gibt nicht für jedes Problem ein Patentrezept. Sammeln Sie
-Erfahrung durch Ausprobieren. Dank Unit Testing und Versionskontrolle kann dabei
+Erfahrung durch Ausprobieren! Dank Unit Testing und Versionskontrolle kann dabei
 nicht viel schief gehen.
 
 Die Webseite [Refactoring Guru](https://refactoring.guru/) bietet einen guten,
-englischsprachigen Überblick über das Thema:
+englischsprachigen Überblick zum Thema:
 
 - [Code Smells](https://refactoring.guru/refactoring/smells)
 - [Refactorings](https://refactoring.guru/refactoring/techniques)
@@ -89,20 +88,26 @@ des _Refactoring_-Buches (siehe oben) enthält einen umfassenden Katalog von
 Refactorings. Der Zugang ist jedoch kostenpflichtig, bzw. muss man im Besitz des
 Buches sein, um Zugang zu erhalten.
 
-## Aufgaben
+# Refactoring: Aufgaben
 
 Bei den folgenden Aufgaben soll nach dem folgenden Schema vorgegangen werden:
 
 1. Den Code lesen und das Problem (_Code Smell_) erkennen
-2. Unit Tests für den Code schreiben
-3. Den Code anpassen (_Refactoring_ anwenden) und dabei per Unit Test prüfen
+2. Unit Tests für den Code schreiben (oder lesen und evtl. erweitern)
+3. Den Code anpassen (_Refactoring_ anwenden) und ihn dabei per Unit Test überprüfen
 
 **Diese Aufgabenstellungen gilt für alle der folgenden Beispiele!**
 
 Die oben verlinkten Code Smells und Refactorings können beim Lösen der Aufgaben
 helfen. Vielleicht finden Sie aber selber Probleme und entsprechende Lösungen.
 
-Sie können die Aufgaben in beliebiger Reihenfolge lösen.
+Sie können die Aufgaben in beliebiger Reihenfolge lösen. Erstellen Sie zuerst
+einen Fork von diesem Repository.
+
+Die Angaben zu Quellcodedateien beziehen sich auf die Unterverzeichnisse
+`csharp` (C#) bzw. `python` (Python).
+
+## C# (Unterverzeichnis `csharp`)
 
 ### Stammbaum
 
@@ -173,7 +178,7 @@ schneller durchläuft. Hierzu gibt es mehrere Möglichkeiten:
 2. Rekursive Implementierung mit Akkumulator-Parametern für die Zwischenergebnisse
 3. Rekursive Implementierung mit einem Cache (_Memoization_)
 
-### Währungsrechner 
+### Währungsrechner
 
 Die Klasse `CurrencyConverter` (`Refactoring/CurrencyConverter.cs`) enthält eine
 Methode zur Umrechnung von Schweizer Franken (CHF) in einige andere Währungen
@@ -216,3 +221,21 @@ Schreiben Sie Ihre Tests für die Methode `Zoo.MakeNoise()` in `Refactoring.Test
 
 Falls Sie das Problem am Code (Methode `MakeNoise()`) nicht sehen, überlegen Sie
 sich am besten, was der Zweck von Polymorphie und Vererbung ist.
+
+## Python (Unterverzeichnis `python`)
+
+TODO
+
+### Stammbaum
+
+#### Zusatzaufgabe (freiwillig)
+
+### Fibonacci-Zahlen
+
+### Währungsrechner
+
+### Benotung
+
+### Zahlen runden
+
+### Tierlaute
