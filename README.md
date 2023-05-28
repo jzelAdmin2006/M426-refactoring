@@ -299,6 +299,19 @@ Dadurch werden die Nachfahren von _Otto_ textuell ausgegeben:
 			 Geany is a descendant of Otto (generation 3)
 			 Hank is a descendant of Otto (generation 3)
 
+Die Klasse `FamilyMember` enthält eine Methode `get_descendants`, welche ein
+Dictionary zurückgibt (Key: Familienmitglied, Schlüssel: Nummerierung der
+Generation).
+
+Testfälle stehen in `tests/family_member_test.py` bereit. Sie können bei Bedarf
+weitere Testfälle schreiben.
+
+#### Zusatzaufgabe (freiwillig)
+
+Schreiben Sie die Klasse `FamilyMember` (und wenn nötig: das Hauptprogramm in
+`heritage.py`) um, sodass die Beziehungen nicht mehr von den Eltern zu den
+Kindern, sondern von den Kindern zu den Eltern gehen.
+
 #### Zusatzaufgabe (freiwillig)
 
 ### Fibonacci-Zahlen
