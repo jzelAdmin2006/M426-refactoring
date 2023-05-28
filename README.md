@@ -111,7 +111,8 @@ Die Angaben zu Quellcodedateien beziehen sich auf die Unterverzeichnisse
 
 ### Stammbaum
 
-Bei dieser Aufgabe wird der folgende (unvollständige) Stammbaum abgebildet:
+Bei dieser Aufgabe wird der folgende (unvollständige, da nur einen Elternteil
+zeigende) Stammbaum abgebildet:
 
 ![Ein Stammbaum (unvollständig) als _Binärbaum_](family-tree.png)
 

@@ -34,7 +34,9 @@ public class Heritage
             string name = descendant.Name;
             int generation = descendants[descendant];
             string separator = new string('\t', generation);
-            Console.WriteLine($"{separator} {name} is a descendant of {otto.Name} (generation {generation})");
+            Console.WriteLine(
+                $"{separator} {name} is a descendant of {otto.Name} (generation {generation})"
+            );
         }
     }
 }
