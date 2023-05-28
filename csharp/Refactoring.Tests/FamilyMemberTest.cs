@@ -23,7 +23,7 @@ public class FamilyMemberTest
     }
 
     [Fact]
-    public void TestDescendantsOFThreeGenerationsHaveCorrectGeneration()
+    public void TestDescendantsOfThreeGenerationsHaveCorrectGeneration()
     {
         // Arrange
         FamilyMember a = new("a");
