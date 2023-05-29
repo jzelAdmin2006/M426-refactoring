@@ -186,8 +186,8 @@ schneller durchläuft. Hierzu gibt es mehrere Möglichkeiten:
 ### Währungsrechner
 
 Die Klasse `CurrencyConverter` (`Refactoring/CurrencyConverter.cs`) enthält eine
-Methode zur Umrechnung von Schweizer Franken (CHF) in einige andere Währungen
-(USD, EUR, GBP, RUB).
+statische Methode zur Umrechnung von Schweizer Franken (CHF) in einige andere
+Währungen (USD, EUR, GBP, RUB).
 
 Will man eine weitere Währung unterstützen, muss der Code erweitert werden.
 Schöner wäre es, wenn man hierzu nur eine Datenstruktur reweitern müsste. Bauen
@@ -327,6 +327,14 @@ schneller durchläuft. Hierzu gibt es mehrere Möglichkeiten:
 3. Rekursive Implementierung mit einem Cache (_Memoization_)
 
 ### Währungsrechner
+
+Das Modul `currency_converter` (`refactoring/currency_converter.py`) enthält
+eine Funktion zur Umrechnung von Schweizer Franken (CHF) in einige andere
+Währungen (USD, EUR, GBP, RUB).
+
+Will man eine weitere Währung unterstützen, muss der Code erweitert werden.
+Schöner wäre es, wenn man hierzu nur eine Datenstruktur reweitern müsste. Bauen
+Sie die Funktion `convert_to` entsprechend um.
 
 ### Benotung
 

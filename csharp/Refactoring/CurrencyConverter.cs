@@ -2,14 +2,7 @@ namespace Refactoring;
 
 public class CurrencyConverter
 {
-    string ToCurrency { get; }
-
-    public CurrencyConverter(string toCurrency)
-    {
-        this.ToCurrency = toCurrency;
-    }
-
-    public double ConvertTo(double amount)
+    public static double ConvertTo(double amount, string toCurrency)
     {
         switch (ToCurrency)
         {
