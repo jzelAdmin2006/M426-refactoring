@@ -312,9 +312,19 @@ Schreiben Sie die Klasse `FamilyMember` (und wenn nötig: das Hauptprogramm in
 `heritage.py`) um, sodass die Beziehungen nicht mehr von den Eltern zu den
 Kindern, sondern von den Kindern zu den Eltern gehen.
 
-#### Zusatzaufgabe (freiwillig)
-
 ### Fibonacci-Zahlen
+
+Im Modul `fibonacci` (`refactoring/fibonacci.py`) gibt es eine Funktion namens
+`fib()` mit einem entsprechenden Testfall (`tests/fibonacci_test.py`). Die
+Testfunktion `test_big_fibonacci_number()` demonstriert, dass die rekursive
+Implementierung von `fib()` sehr ineffizient ist.
+
+Schreiben Sie die Funktion `fib()` um, sodass Sie immer noch funktioniert, aber
+schneller durchläuft. Hierzu gibt es mehrere Möglichkeiten:
+
+1. Strukturierte Implementierung mittels Schleife
+2. Rekursive Implementierung mit Akkumulator-Parametern für die Zwischenergebnisse
+3. Rekursive Implementierung mit einem Cache (_Memoization_)
 
 ### Währungsrechner
 
