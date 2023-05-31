@@ -210,7 +210,7 @@ Schreiben Sie Ihre Tests in `Refactoring.Tests/GradingTest.cs`.
 Falls Sie nicht wissen, wie der Code verbessert werden könnte, hilft vielleicht
 ein Blick auf die
 [ASCII-Tabelle](https://www.w3schools.com/charsets/ref_html_ascii.asp). (Auf
-einem Unix-artigen System finden Sie diese mittels `man 7 ascii`)
+einem Unix-artigen System finden Sie diese mittels `man 7 ascii`.)
 
 ### Zahlen runden
 
@@ -336,8 +336,52 @@ Will man eine weitere Währung unterstützen, muss der Code erweitert werden.
 Schöner wäre es, wenn man hierzu nur eine Datenstruktur reweitern müsste. Bauen
 Sie die Funktion `convert_to` entsprechend um.
 
+Schreiben Sie Ihre Tests in `tests/currency_converter_test.py`.
+
 ### Benotung
+
+Das  Modul `grading` (`refactoring/grading.py`) besteht nur aus einer Funktion
+namens `get_letter_grade`. Diese übersetzt numerische Noten von 1 (beste) bis  6
+(schlechteste) in Buchstaben von A (beste) bis F (schlechteste).
+
+Der Code kann wesentlich einfacher gestaltet werden, wenn man sich den Umstand
+zunutze macht, dass sich die ASCII-Zeichen `A` bis `F` alle mit dem gleichen
+Mechanismus in die Zahlen `1` bis `6` umrechnen lassen.
+
+Schreibne Sie Ihre Tests in `tests/grading_test.py`.
+
+Falls Sie nicht wissen, wie der Code verbessert werden könnte, hilft vielleicht
+ein Blick auf die
+[ASCII-Tabelle](https://www.w3schools.com/charsets/ref_html_ascii.asp). (Auf
+einem Unix-artigen System finden Sie diese mittels `man 7 ascii`.)
 
 ### Zahlen runden
 
+Die Klasse `Rounding` (`refactoring/rounding.py`) ermöglicht mittels der Methode
+`round()` das Runden auf eine bestimmte Präzision.
+
+Zwischen der Genauigkeit der Rundung (`precision`) und den Werten, die in der
+Berechnungsformel verwendet werden, besteht ein Zusammenhang. (Tipp: Will man
+eine Zahl auf Hundertstel genau runden, kann man das Hundertfache der Zahl
+runden und diese anschliessend durch hundert dividieren.) Vereinfachen Sie den
+Code entsprechend.
+
+Schreiben Sie Ihre Tests in `tests/rounding_test.py`.
+
 ### Tierlaute
+
+In diesem Beispiel gibt es mehrere Klassen:
+
+- `Animal` (`refactoring/animals/animal.py`): ein abstraktes Tier
+   - `Cow` (`refactoring/animals/cow.py`): eine Kuh
+   - `Dog` (`refactoring/animals/dog.py`): ein Hund
+   - `Horse` (`refactoring/animals/horse.py`): ein Pferd
+- `Zoo` (`refactoring/animals/zoo.py`): eine Client-Klasse, welche die bisher
+  genannten Klassen verwendet
+
+Die Methode in `Zoo.make_noise()` ist nicht sinnvoll implementiert worden.
+Verbessern Sie diese. Falls Sie das Problem am Code nicht sehen, überlegen Sie
+sich am besten, was der Zweck von Polymorphie und Vererbung ist.
+
+Schreiben Sie Ihre Tests für die Methode `Zoo.make_noise()` in
+`tests/zoo_test.py`.
