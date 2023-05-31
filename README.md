@@ -370,18 +370,17 @@ Schreiben Sie Ihre Tests in `tests/rounding_test.py`.
 
 ### Tierlaute
 
-In diesem Beispiel gibt es mehrere Klassen:
+In diesem Beispiel gibt es mehrere Klassen und Module:
 
 - `Animal` (`refactoring/animals/animal.py`): ein abstraktes Tier
    - `Cow` (`refactoring/animals/cow.py`): eine Kuh
    - `Dog` (`refactoring/animals/dog.py`): ein Hund
    - `Horse` (`refactoring/animals/horse.py`): ein Pferd
-- `Zoo` (`refactoring/animals/zoo.py`): eine Client-Klasse, welche die bisher
+- `zoo` (`refactoring/animals/zoo.py`): ein Client-Modul, welches die bisher
   genannten Klassen verwendet
 
-Die Methode in `Zoo.make_noise()` ist nicht sinnvoll implementiert worden.
+Die Funktion `zoo.make_noise()` ist nicht sinnvoll implementiert worden.
 Verbessern Sie diese. Falls Sie das Problem am Code nicht sehen, überlegen Sie
 sich am besten, was der Zweck von Polymorphie und Vererbung ist.
 
-Schreiben Sie Ihre Tests für die Methode `Zoo.make_noise()` in
-`tests/zoo_test.py`.
+Schreiben Sie Ihre Tests für die Funktion `make_noise()` in `tests/zoo_test.py`.
