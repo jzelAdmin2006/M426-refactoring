@@ -4,7 +4,7 @@ public class CurrencyConverter
 {
     public static double ConvertTo(double amount, string toCurrency)
     {
-        switch (ToCurrency)
+        switch (toCurrency)
         {
             case "USD":
                 return amount * 1.09;
@@ -15,7 +15,7 @@ public class CurrencyConverter
             case "RUB":
                 return amount * 79.78;
             default:
-                throw new ArgumentException($"no exchange rate for {ToCurrency} available");
+                throw new ArgumentException($"no exchange rate for {toCurrency} available");
         }
     }
 }
