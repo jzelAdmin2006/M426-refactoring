@@ -15,6 +15,4 @@ class Rounding:
             case 0.01:
                 return round(value * 100.0) / 100.0
             case _:
-                raise ValueError(
-                    "unable to round to a precision of " + {self.precision}
-                )
+                raise ValueError(f"unable to round to a precision of {self.precision}")
