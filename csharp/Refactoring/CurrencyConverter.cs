@@ -1,7 +1,6 @@
 namespace Refactoring;
 
-public class CurrencyConverter
-{
+public class CurrencyConverter {
     private static Dictionary<string, double> exchangeRates = new()
         {
             { "USD", 1.09 },
@@ -12,7 +11,7 @@ public class CurrencyConverter
 
     public static double ConvertTo(double amount, string toCurrency)
     {
-        if(exchangeRates.ContainsKey(toCurrency))
+        if (exchangeRates.ContainsKey(toCurrency))
         {
             return amount * exchangeRates[toCurrency];
         }
