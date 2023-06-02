@@ -111,7 +111,7 @@ Die Angaben zu Quellcodedateien beziehen sich auf die Unterverzeichnisse
 
 Stellen Sie sicher, dass Sie das .Net-SDK in Version 7 installiert haben! Falls Sie mit dem Terminal arbeiten, wechseln Sie jetzt in das Unterverzeichnis `csharp/`:
 
-   cd csharp/
+    cd csharp/
 
 ### Stammbaum
 
