@@ -247,18 +247,24 @@ Schreiben Sie Ihre Tests für die Methode `Zoo.MakeNoise()` in
 
 Stellen Sie sicher, dass Sie Python in einer aktuellen Version (3.11) mitsamt `pip` installiert haben. Wechseln Sie im Terminal ins Unterverzeichnis `python/`, wo Sie eine virtuelle Umgebung anlegen:
 
-   cd python/
-   python -m venv env
+```bash
+cd python/
+python -m venv env
+```
 
 Aktivieren Sie die virtuelle Umgebung:
 
-   . env/bin/activate       # Linux/Bash
-   env/Scripts/activate     # Windows/Bash
-   env/Scripts/Activate.ps1 # Windows/PowerShell
+```bash
+. env/bin/activate       # Linux/Bash
+env/Scripts/activate     # Windows/Bash
+env/Scripts/Activate.ps1 # Windows/PowerShell
+```
 
 Installieren Sie `pytest`:
 
-   pip install pytest
+```bash
+pip install pytest
+```
 
 ### Stammbaum
 
@@ -280,7 +286,9 @@ modelliert.)
 
 Das Programm lässt sich folgendermassen im Terminal ausführen:
 
-   python refactoring/heritage.py
+```bash
+python heritage.py
+```
 
 Dadurch werden die Nachfahren von _Otto_ textuell ausgegeben:
 
