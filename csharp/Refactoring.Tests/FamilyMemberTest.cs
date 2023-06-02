@@ -53,7 +53,7 @@ public class FamilyMemberTest
         FamilyMember g = new("g", new() { f });
 
         // Act
-        var descendants = e.GetDescendants(0);
+        var descendants = g.GetDescendants(0);
 
         // Assert
         Assert.Equal(6, descendants[a]);
