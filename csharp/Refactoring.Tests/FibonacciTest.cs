@@ -20,4 +20,15 @@ public class FibonacciTest {
         // Assert
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void TestFibonacciNegative()
+    {
+        // Act
+        var exception = Record.Exception(() => Fibonacci.Fib(-1));
+
+        // Assert
+        Assert.IsType<ArgumentException>(exception);
+        Assert.Equal("Fibonacci undefined for negative numbers", exception.Message);
+    }
 }
