@@ -286,7 +286,9 @@ modelliert.)
 
 Das Programm lässt sich folgendermassen im Terminal ausführen:
 
-   python refactoring/heritage.py
+```bash
+python heritage.py
+```
 
 Dadurch werden die Nachfahren von _Otto_ textuell ausgegeben:
 
