@@ -8,4 +8,6 @@ public abstract class Animal
     {
         this.Name = name;
     }
+
+    public abstract string MakeNoise();
 }

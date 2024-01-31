@@ -21,18 +21,16 @@ public class FamilyMember
     public Dictionary<FamilyMember, int> GetDescendants(int generation)
     {
         Dictionary<FamilyMember, int> descendants = new();
-        foreach (FamilyMember heir in children)
-        {
-            descendants.Add(heir, generation + 1);
-            foreach (FamilyMember grandChild in heir.children)
-            {
-                descendants.Add(grandChild, generation + 2);
-                foreach (FamilyMember greatGrandChild in grandChild.children)
-                {
-                    descendants.Add(greatGrandChild, generation + 3);
-                }
-            }
-        }
+        AddDescendants(children, generation + 1, descendants);
         return descendants;
+    }
+
+    private void AddDescendants(IEnumerable<FamilyMember> familyMembers, int generation, Dictionary<FamilyMember, int> descendants)
+    {
+        foreach (FamilyMember member in familyMembers)
+        {
+            descendants.Add(member, generation);
+            AddDescendants(member.children, generation + 1, descendants);
+        }
     }
 }
